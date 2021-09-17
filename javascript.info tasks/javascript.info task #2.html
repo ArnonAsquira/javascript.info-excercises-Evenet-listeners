@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+      .menu{
+          display: none;
+      }
+      #arrow{
+          cursor: pointer;
+      }
+  </style>
+</head>
+<body>
+
+  <span id='arrow'>▶</span>Sweeties (click me)!
+  <ul class="menu">
+    <li>Cake</li>
+    <li>Donut</li>
+    <li>Honey</li>
+  </ul>
+
+<script>
+  let arrow = document.getElementById('arrow');
+  let menu = document.getElementsByClassName('menu')[0];
+  function dispalyMenu(e){
+      if(menu.style.display === "none"){
+        menu.style = 'display: block'
+        arrow.innerText = '▼'
+      }else{
+          menu.style = 'display: none'
+          arrow.innerText = '▶'
+      }
+  }
+  arrow.addEventListener('click',dispalyMenu);
+</script>
+</body>
+</html>
