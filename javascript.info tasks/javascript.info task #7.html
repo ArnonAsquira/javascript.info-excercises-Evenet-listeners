@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    #contents {
+      padding: 5px;
+      border: 1px green solid;
+    }
+  </style>
+</head>
+
+<body>
+
+  <fieldset id="contents">
+    <legend>#contents</legend>
+    <p>
+      How about to read <a href="https://wikipedia.org">Wikipedia</a> or visit <a href="https://w3.org"><i>W3.org</i></a> and learn about modern standards?
+    </p>
+  </fieldset>
+
+<script>
+  let p = document.querySelector('p');
+  function handler(e){
+    if(e.target.tagName != 'A' && e.target.parentElement.tagName != 'A'){
+      return;
+    }
+    let link = e.target;
+    let ask = confirm("are you sure you want to live this page?");
+    ask;
+    if(!ask){
+        e.preventDefault();
+    }
+  }
+  p.addEventListener('click', handler)
+</script>
+</body>
+</html>
